@@ -22,8 +22,11 @@
 
 document.onkeyup = function letterPressed(event) {
     var x = event.keyCode;  // Get the Unicode value
+
     userGuess = String.fromCharCode(x).toLowerCase();  // Convert the value into a character
-    var isMatched = chosenWord.split('').filter(letter => letter === userGuess).length>0; // Matching the letters in the word with keyboard letter
+
+    var isMatched = chosenWord.split('').filter(letter => letter === userGuess).length>0; // Splitting up the word into an array so we can run a comparison
+   
     if (isMatched) {
         var letterPosition = chosenWord.indexOf(userGuess);
         document.getElementsByClassName("letter")[letterPosition].innerHTML = userGuess
@@ -34,6 +37,15 @@ document.onkeyup = function letterPressed(event) {
 
 // Function that stops the game when counter gets to 0
 // reset function 
+
+
+// function resetGame(wordInPlay) {
+
+//   var elements = wordInPlay.elements;
+
+//   wordInPlay.reset();
+
+//   for(i=0; i<elements.length; i++) {
 
 // document.getElementById('myform').reset();
 
