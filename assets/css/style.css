@@ -1,0 +1,9 @@
+.letter {
+    width: 2em;
+    display: inline;
+    margin: 2px;
+}
+
+#guesses {
+    padding-top: 2em;
+}
